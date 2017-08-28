@@ -1,0 +1,10 @@
+Work in progress HTTP router based on a trie data structure.
+
+# Building
+
+Make sure you have cmake.
+
+1. mkdir build
+1. cmake ..
+1. cmake --build .
+1. ctest -VV

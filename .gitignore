@@ -1,0 +1,5 @@
+build
+.vscode
+.codelite
+Debug
+autom4te.cache
