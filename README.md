@@ -11,8 +11,8 @@ Make sure you have cmake.
 
 # Features
 
-[x] Basic Path Parsing
+- [x] Basic Path Parsing
 
-[x] Wildcard Path Parsing
+- [x] Wildcard Path Parsing
 
-[ ] Http Router Interface
+- [ ] Http Router Interface
