@@ -10,7 +10,9 @@ Make sure you have cmake.
 1. ctest -VV
 
 # Features
+
 [x] Basic Path Parsing
-[ ] Http Request Adapter
-[ ] Http Response Adapter
-[ ] Nested router support
+
+[x] Wildcard Path Parsing
+
+[ ] Http Router Interface

@@ -57,7 +57,17 @@ TrieContainsResult Trie::contains(const string& key) {
             result.pathParams[paramName] = paramValue;
         }
         else if (curNode->children[this->wildcard]) {
-            // return wildcard contents
+            curNode = curNode->children[this->wildcard].get();
+
+            string paramValue = "";
+            while (it != key.end()) {
+                curChar = string(1, *it);
+                paramValue.append(curChar);
+                ++it;
+            }
+            string& paramName = curNode->pathToken.tokenName;
+
+            result.pathParams[paramName] = paramValue;
             break;
         }
         else if (curNode->children[curChar]) {

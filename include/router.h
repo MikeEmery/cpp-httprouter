@@ -13,19 +13,17 @@ typedef std::string ContentBody;
 
 class HttpRequest {
 public:
-    const HeaderMap headers;
     const QueryParams queryParams;
     const PathParams pathParams;
-    const std::string contentBody;
-    HttpRequest(const HeaderMap& inHeaders, const QueryParams& inQuery, const PathParams& inPath, const std::string& inContent):
-        headers(inHeaders), queryParams(inQuery), pathParams(inPath), contentBody(inContent) {}
+    HttpRequest(const QueryParams& inQuery, const PathParams& inPath): 
+        queryParams(inQuery), pathParams(inPath) {}
 };
 
 typedef std::function<void(const HttpRequest&)> HttpHandler;
 
 class HttpRouter {
 public:
-    void handle(const HttpRequest& req);
+    void handle(const std::string& fullUri);
 };
 
 class HttpRouterConfiguration {
